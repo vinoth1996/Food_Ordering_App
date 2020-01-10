@@ -1,17 +1,54 @@
 import React, { Component } from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col, Container } from 'react-bootstrap';
 
 class cards extends Component {
     render() {
         return(
-            <Card style={{ width: '16rem', padding: '0' }}>
-                <Card.Body>
-                    <Row>
-                        <Card.Title as={Col}>a</Card.Title>
-                        <Card.Title as={Col}>b</Card.Title>
-                    </Row>
-                </Card.Body>
-            </Card>
+            <Container>
+                <Row>
+                <Col sm={3}>
+                    <Card style={{ width: '16rem' }}>
+                        <Card.Body>
+                            <Row inline>
+                                <Card.Title><h6>Non Veg Combo</h6></Card.Title>
+                                <Card.Title as={Col}><h6>63.50</h6></Card.Title>
+                            </Row>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={3}>
+                    <Card style={{ width: '16rem' }}>
+                        <Card.Body>
+                            <Row inline>
+                                <Card.Title><h6>Non Veg Combo</h6></Card.Title>
+                                <Card.Title as={Col}><h6>63.50</h6></Card.Title>
+                            </Row>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={3}>
+                    <Card style={{ width: '16rem' }}>
+                        <Card.Body>
+                            <Row inline>
+                                <Card.Title><h6>Non Veg Combo</h6></Card.Title>
+                                <Card.Title as={Col}><h6>63.50</h6></Card.Title>
+                            </Row>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={3}>
+                    <Card style={{ width: '16rem' }}>
+                        <Card.Body>
+                            <Row inline>
+                                <Card.Title><h6>Non Veg Combo</h6></Card.Title>
+                                <Card.Title as={Col}><h6>63.50</h6></Card.Title>
+                            </Row>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                
+                </Row>
+            </Container>
         );
     }
 }
