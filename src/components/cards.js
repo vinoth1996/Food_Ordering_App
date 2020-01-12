@@ -1,9 +1,21 @@
 import React from 'react';
 // import { Card, Row, Col, Container } from 'react-bootstrap';
 
-function cards() {
+function cards({itemName}) {
         return(
-            <h1>{this.props.itemName}</h1>
+            <div>
+                {/* {
+                    itemName.map(items => {
+                    return (
+                    <div>
+                    <h1 key={items.itemnname}>{itemName}</h1>
+                    <br />
+                    </div>
+                    )
+                    })
+                } */}
+                <h1 key={itemName}>{itemName}</h1>
+            </div>
             // <Container>
             //     <Row>
             //     <Col sm={3}>

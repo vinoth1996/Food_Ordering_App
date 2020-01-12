@@ -10,22 +10,38 @@ function App() {
 
   useEffect(() => {
     foods();
-  })
+  }, [])
 
   const foods = async() => {
     const response = await fetch('https://s3-ap-southeast-1.amazonaws.com/he-public-data/smartQFood8bef5a2.json');
     const data = await response.json();
-    setItems(data.itemname);
-    console.log(data[0].itemname);
+    const recipe = data.map((datas, i) => {
+      // const arr = []
+      // var items = {}
+      // items.name = datas.itemname
+      // items.price = datas.price
+      // arr.push(items)
+      // console.log(datas.itemname)
+      return datas.itemname;
+    })
+    setItems(recipe);
+    // console.log(recipe);
   }
+
+  console.log(items)
+
+  // const filteredItems = items.map(item => {
+  //   return item;
+  // })
 
   return (
     <div className="App">
       <NavigationBar />
       <br />
-      {items.map((item, i) => (
-        <Cards itemName={item[i].itemname} price={item[i].price} />
-      ))}
+      {/* {items.map(item => */}
+        <Cards itemName={items} />
+        <br />
+      {/* )} */}
     </div>
   );
 }
