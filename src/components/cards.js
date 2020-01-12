@@ -1,35 +1,32 @@
 import React from 'react';
-// import { Card, Row, Col, Container } from 'react-bootstrap';
+import { Card, Row, Col, Container } from 'react-bootstrap';
 
 function cards({itemName}) {
         return(
-            <div>
-                {/* {
-                    itemName.map(items => {
-                    return (
-                    <div>
-                    <h1 key={items.itemnname}>{itemName}</h1>
-                    <br />
-                    </div>
-                    )
-                    })
-                } */}
-                <h1 key={itemName}>{itemName}</h1>
-            </div>
-            // <Container>
-            //     <Row>
-            //     <Col sm={3}>
-            //         <Card style={{ width: '16rem' }}>
-            //             <Card.Body>
-            //                 <Row>
-            //                     <Card.Title><h6>{this.props.itemName}</h6></Card.Title>
-            //                     <Card.Title as={Col}><h6>{this.props.price}</h6></Card.Title>
-            //                 </Row>
-            //             </Card.Body>
-            //         </Card>
-            //     </Col>
-            //     </Row>
-            // </Container>
+            <Container>
+                <Row>
+                <Col sm={3}>
+                    <Card style={{ width: '16rem' }}>
+                        <Card.Body>
+                            <Row>
+                                {
+                                    itemName.map(items => { 
+                                        return (
+                                            <div>
+                                                <Card.Title key={items.itemname}><h6>{items.itemname}</h6></Card.Title>
+                                                <Card.Title as={Col} key={items.price.toString()}><h6>{items.price}</h6></Card.Title>
+                                                <br />
+                                            </div>
+                                        )
+                                    })  
+                                }
+                                
+                            </Row>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                </Row>
+            </Container>
         );
 }
 
