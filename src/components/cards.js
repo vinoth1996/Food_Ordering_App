@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Row, Col, Container } from 'react-bootstrap';
 
-function cards({itemName}) {
+function cards({itemName, price}) {
         return(
             <Container>
                 <Row>
@@ -9,18 +9,9 @@ function cards({itemName}) {
                     <Card style={{ width: '16rem' }}>
                         <Card.Body>
                             <Row>
-                                {
-                                    itemName.map(items => { 
-                                        return (
-                                            <div>
-                                                <Card.Title key={items.itemname}><h6>{items.itemname}</h6></Card.Title>
-                                                <Card.Title as={Col} key={items.price.toString()}><h6>{items.price}</h6></Card.Title>
-                                                <br />
-                                            </div>
-                                        )
-                                    })  
-                                }
-                                
+                                <Card.Title><h6>{itemName}</h6></Card.Title>
+                                <Card.Title as={Col}><h6>{price}</h6></Card.Title>
+                                <br />                                
                             </Row>
                         </Card.Body>
                     </Card>
