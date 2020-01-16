@@ -22,15 +22,17 @@ function App() {
     <div className="App">
       <NavigationBar />
       <br />
+      <div className="food">
       {
         items.map((item, i) => {
           return(
             <div>
-            <Cards key={i} itemName={item.itemname} price={item.price} />
+              <Cards key={i} itemName={item.itemname} price={item.price} />
             </div>
           )
         })
       }
+      </div>
     </div>
   );
 }
