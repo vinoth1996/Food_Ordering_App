@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Row, Col, Container, ButtonGroup, Button } from 'react-bootstrap';
 
-function cards({itemName, price}) {
+function Cards({itemName, price}) {
+
+    const [count, setCount] = useState(0);
+
         return(
             <Container>
                 <div className="row card-columns">
@@ -13,9 +16,9 @@ function cards({itemName, price}) {
                                     <Card.Title as={Col}><h6>&#8377;{price}</h6></Card.Title>
                                     <br />
                                     <ButtonGroup>
-                                        <Button variant="none" style={{ borderColor: 'yellow' }}>-</Button>
-                                        <Button variant="none" style={{ borderColor: 'yellow' }}>1</Button>
-                                        <Button variant="none" style={{ borderColor: 'yellow' }}>+</Button>
+                                        <Button variant="none" onClick={() => setCount(count - 1)} style={{ borderColor: 'yellow', boxShadow: 'none' }}>-</Button>
+                                        <Button variant="none" style={{ borderColor: 'yellow', boxShadow: 'none' }}>{count}</Button>
+                                        <Button variant="none" onClick={() => setCount(count + 1)} style={{ borderColor: 'yellow', boxShadow: 'none' }}>+</Button>
                                     </ButtonGroup>                                
                                 </Row>
                             </Card.Body>
@@ -26,4 +29,4 @@ function cards({itemName, price}) {
         );
 }
 
-export default cards;
+export default Cards;

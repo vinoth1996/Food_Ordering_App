@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavigationBar from './components/navbar';
-import Cards from './components/cards';
+import NavigationBar from './components/NavBar';
+import Cards from './components/Cards';
 
 function App() {
   
