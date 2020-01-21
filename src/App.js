@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './components/NavBar';
 import Cards from './components/Cards';
+import { Jumbotron, Col, Container, Row } from 'react-bootstrap';
 
 function App() {
   
@@ -18,22 +19,40 @@ function App() {
     setItems(data);
   }
 
+  let foodItems = items.map((item, i) => {
+    return(
+      <Col sm="3">
+        <Cards key={i} itemName={item.itemname} price={item.price}/>
+        <br/>
+      </Col>
+    )
+  })
+
   return (
-    <div className="App">
+    <Fragment>
       <NavigationBar />
-      <br />
       <div className="food">
-      {
-        items.map((item, i) => {
-          return(
-            <div>
-              <Cards key={i} itemName={item.itemname} price={item.price} />
-            </div>
-          )
-        })
-      }
+        
+          <Container>
+          <Jumbotron>
+            <Row>
+            {foodItems}
+            
+            </Row>
+            </Jumbotron>
+          </Container>
+        {/* {
+          items.map((item, i) => {
+            return(
+              <div className="card-columns">
+                <Cards key={i} itemName={item.itemname} price={item.price} />
+              </div>
+            )
+          })
+        } */} 
+        
       </div>
-    </div>
+    </Fragment>
   );
 }
 
