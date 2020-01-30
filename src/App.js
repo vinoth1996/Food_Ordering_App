@@ -21,8 +21,8 @@ function App() {
 
   let foodItems = items.map((item, i) => {
     return(
-      <Col sm="3">
-        <Cards key={i} itemName={item.itemname} price={item.price}/>
+      <Col sm="3" key={i}>
+        <Cards key={i} itemName={item.itemname} price={item.price} />
         <br/>
       </Col>
     )
