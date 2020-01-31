@@ -21,10 +21,14 @@ function App() {
 
   let foodItems = items.map((item, i) => {
     return(
-      <Col sm="3" key={i}>
+      // <Col sm="3" key={i}>
+      <div>
+        {/* <Row> */}
         <Cards key={i} itemName={item.itemname} price={item.price} />
-        <br/>
-      </Col>
+        {/* </Row> */}
+        {/* <br/> */}
+      </div>  
+      // </Col>
     )
   })
 
@@ -32,25 +36,15 @@ function App() {
     <Fragment>
       <NavigationBar />
       <div className="food">
-        
-          <Container>
-          <Jumbotron>
-            <Row>
-            {foodItems}
-            
-            </Row>
-            </Jumbotron>
-          </Container>
-        {/* {
-          items.map((item, i) => {
-            return(
-              <div className="card-columns">
-                <Cards key={i} itemName={item.itemname} price={item.price} />
-              </div>
-            )
-          })
-        } */} 
-        
+        <Container className="container">
+          {/* <Jumbotron> */}
+            {/* <div>  */}
+            {/* <Row> */}
+              {foodItems}
+            {/* </Row> */}
+            {/* </div> */}
+          {/* </Jumbotron> */}
+        </Container>
       </div>
     </Fragment>
   );
