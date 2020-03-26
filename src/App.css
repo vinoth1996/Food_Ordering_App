@@ -72,9 +72,11 @@
 .food > .container {
   border-radius: 3px;
   display: grid;
-  align-content: center;
-  justify-content: start;
-  grid: 150px / auto auto auto;
+  /* align-content: center; */
+  justify-content: center;
+  /* align-items: stretch; */
+  grid-template-columns: auto auto auto auto;
+  /* grid: 150px / auto auto auto; */
   grid-gap: 7px;
   background-color: rgba(217, 219, 210, 0.267);
   padding: 10px;
