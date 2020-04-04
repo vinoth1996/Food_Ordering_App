@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './components/NavBar';
 import Cards from './components/Cards';
-import { Jumbotron, Col, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 function App() {
   
@@ -21,14 +21,9 @@ function App() {
 
   let foodItems = items.map((item, i) => {
     return(
-      // <Col sm="3" key={i}>
       <div>
-        {/* <Row> */}
         <Cards key={i} itemName={item.itemname} price={item.price} />
-        {/* </Row> */}
-        {/* <br/> */}
       </div>  
-      // </Col>
     )
   })
 
@@ -37,13 +32,7 @@ function App() {
       <NavigationBar />
       <div className="food">
         <Container className="container">
-          {/* <Jumbotron> */}
-            {/* <div>  */}
-            {/* <Row> */}
-              {foodItems}
-            {/* </Row> */}
-            {/* </div> */}
-          {/* </Jumbotron> */}
+          {foodItems}
         </Container>
       </div>
     </Fragment>
