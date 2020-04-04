@@ -6,11 +6,10 @@ function Cards({itemName, price}) {
     const [count, setCount] = useState(0);
 
         return(
-            <Card body border="light" className="shadow-sm" style={{ height: '9rem', width: '12rem' }}>
+            <Card body border="light" className="shadow-sm" style={{ height: '9rem', width: '12rem', marginBottom: '30px' }}>
                 <Row>
                     <Card.Title><h6>{itemName}</h6></Card.Title>
-                    <Card.Title as={Col}><h6>&#8377;{price}</h6></Card.Title>
-                    {/* <br /> */}
+                    <Card.Title as={Col}><h6>&#8377; {price}</h6></Card.Title>
                 </Row>
                 <ButtonGroup>
                     <Button variant="none" onClick={() => setCount(count - 1)} style={{ borderColor: 'yellow', boxShadow: 'none' }}>-</Button>

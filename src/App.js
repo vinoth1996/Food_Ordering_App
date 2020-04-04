@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './components/NavBar';
 import Cards from './components/Cards';
-import { Container } from 'react-bootstrap';
+import { Container, CardDeck, Jumbotron } from 'react-bootstrap';
 
 function App() {
   
@@ -31,9 +31,13 @@ function App() {
     <Fragment>
       <NavigationBar />
       <div className="food">
-        <Container className="container">
-          {foodItems}
-        </Container>
+        {/* <Jumbotron style={{ width: '50' }}> */}
+          <Container>
+            <CardDeck>
+              {foodItems}
+            </CardDeck>  
+          </Container>
+        {/* </Jumbotron>   */}
       </div>
     </Fragment>
   );
