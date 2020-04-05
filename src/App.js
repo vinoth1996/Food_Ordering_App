@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './components/NavBar';
 import Cards from './components/Cards';
-import { Container, CardDeck, Jumbotron } from 'react-bootstrap';
+import { Button, Container, CardDeck, Jumbotron } from 'react-bootstrap';
 
 function App() {
   
@@ -31,13 +31,16 @@ function App() {
     <Fragment>
       <NavigationBar />
       <div className="food">
-        {/* <Jumbotron style={{ width: '50' }}> */}
-          <Container>
+        <Container style={{  }}>
+          {/* <Jumbotron style={{ borderRadius: "0", backgroundSize: "100%"}}> */}
             <CardDeck>
               {foodItems}
-            </CardDeck>  
-          </Container>
-        {/* </Jumbotron>   */}
+            </CardDeck>
+          {/* </Jumbotron>   */}
+        </Container>
+      </div>
+      <div style={{ marginTop: "100px", marginBottom: "20px", textAlign: "center" }}>
+        <Button variant="none" type="button" style={{ borderColor: 'yellow', boxShadow: 'none', borderRadius: "25px", padding: "7px 30px" }}>Checkout</Button>
       </div>
     </Fragment>
   );
