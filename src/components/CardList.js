@@ -1,12 +1,12 @@
 import React from 'react';
-import Card from './Cards'
+import Card from './Cards';
 
 function CardList({foodItem}) {
     return(
-        foodItem.map((item) => {
+        foodItem.map((item, index) => {
             return (
                 <div>
-                    <Card key={item.itemname} itemName={item.itemname} price={item.price}/>
+                    <Card key={index} itemName={item.itemname} price={item.price}/>
                 </div>
             )
         })
