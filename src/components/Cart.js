@@ -1,12 +1,15 @@
 import React from 'react';
 import Nav from './NavBar'
 
-function Cart() {
+function Cart({message}) {
     return(
-        <div>
+        <>
             <Nav />
-            <p style={{ textAlign: 'center', fontSize: '2em' }}>Your order details</p>
-        </div>
+            <div style={{ textAlign: 'center', fontSize: '2em' }}>
+                <p >Your order details</p>
+                <p>{message}</p>
+            </div>
+        </>
     );
 }
 

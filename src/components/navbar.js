@@ -11,7 +11,7 @@ function NavBar({searchChange}) {
     return(
         <Navbar className="bg-warning justify-content-center" expand="lg" sticky="top">
             {
-                location.pathname == '/'
+                location.pathname === '/'
                 ?   <>
                         <Form inline>
                             <FormControl type="text" onChange={searchChange} placeholder="search the food" className="mr-sm-2" style={{ width: '18rem' }} />
