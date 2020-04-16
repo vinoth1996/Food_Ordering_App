@@ -17,7 +17,7 @@ function Cards({itemName, price}) {
                 <Card.Title as={Col}><h6>&#8377; {price}</h6></Card.Title>
             </Row>
             {   clicked === false ? 
-                <Button variant="none" onClick={addButton} style={{ borderColor: 'yellow', boxShadow: 'none', marginTop: "30px" }}>Add</Button>:
+                <Button variant="none" onClick={addButton} style={{ borderColor: 'yellow', boxShadow: 'none', marginTop: "30px", borderRadius: "25px", padding: "7px 30px" }}>Add</Button>:
                 <>
                     <ButtonGroup>
                         <Button variant="none" onClick={() => count>0? setCount(count - 1): setCount(0)} style={{ borderColor: 'yellow', boxShadow: 'none', marginTop: "30px" }}>-</Button>
