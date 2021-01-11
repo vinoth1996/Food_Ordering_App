@@ -8,11 +8,11 @@ import Routes from '../routes';
 function Click() {
     return(
         // <Router>
-        <Link to="/Cart">
-            <Button variant="none" type="button" to="/Cart" style={{ borderColor: 'yellow', boxShadow: 'none', borderRadius: "25px", padding: "7px 30px" }}>
+        <Link to="/Cart" style={{ textDecoration: 'none', color: 'black', borderColor: 'yellow', boxShadow: 'none', borderRadius: "25px", padding: "7px 30px" }}>
+            {/* <Button variant="none" type="button" to="/Cart" style={{ borderColor: 'yellow', boxShadow: 'none', borderRadius: "25px", padding: "7px 30px" }}> */}
                 Checkout
-            </Button>
-        </Link>    
+            {/* </Button> */}
+        </Link>
         // </Router>
     );
 }

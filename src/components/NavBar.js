@@ -20,7 +20,7 @@ function NavBar({searchChange}) {
                 :   <>
                         <Navbar.Brand href="#">Orders</Navbar.Brand>
                         <Nav className="ml-auto">
-                            <Nav.Link href="/">Items</Nav.Link>
+                            <Link to="/" style={{ textDecoration: "none", color: 'black' }}>Items</Link>
                         </Nav>
                     </>
             }                      

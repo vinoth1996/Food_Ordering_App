@@ -1,14 +1,23 @@
 import React from 'react';
-import Nav from './NavBar'
+import Nav from './NavBar';
+import { useSelector } from 'react-redux';
 
-function Cart({message}) {
+function Cart({message, count, itemName}) {
+    const orders = useSelector(state => state.addedItems);
+    console.log(orders)
     return(
         <>
             <Nav />
-            <div style={{ textAlign: 'center', fontSize: '2em' }}>
-                <p >Your order details</p>
-                <p>{message}</p>
-            </div>
+            <p style={{ textAlign: 'center', fontSize: '2em' }}>Your Order details</p>
+            {
+                orders.map((item, index) => {
+                    return(
+                        <div key={index} style={{ textAlign: 'center', fontSize: '2em' }}>
+                            <p>{item.name} : {item.quantity}</p>
+                        </div>
+                    )
+                })
+            }
         </>
     );
 }

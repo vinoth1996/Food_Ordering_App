@@ -4,13 +4,13 @@ import Cart from './components/Cart';
 // import history from './history';
 import Home from './components/Home';
 
-function routes() {
+function routes({quantity}) {
     return(
         <BrowserRouter>
             {/* <Switch> */}
             <div>
                 <Route exact path='/' component={Home} />
-                <Route path='/Cart' component={() => <Cart message="hello world"/>} />
+                <Route path='/Cart' component={() => <Cart message="hello world" quantity={quantity}/>} />
             </div>    
             {/* </Switch> */}
         </BrowserRouter>
