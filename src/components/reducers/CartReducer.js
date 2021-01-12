@@ -17,14 +17,14 @@ const reducers = (state = initialState, action) => {
 
       if (existed_item) {
         existed_item.quantity += 1;
-        return { ...state };
+        return { ...state, total: state.total + existed_item.price };
       } else {
         let addedItem = {
           name: action.name,
           price: action.price,
           quantity: 1
         };
-        return { ...state, addedItems: [...state.addedItems, addedItem] };
+        return { ...state, addedItems: [...state.addedItems, addedItem], total: state.total + addedItem.price };
       }
 
     case "decreaseQuantity":
@@ -34,7 +34,7 @@ const reducers = (state = initialState, action) => {
       );
       if (existing_item.quantity > 0) {
         existing_item.quantity -= 1;
-        return { ...state };
+        return { ...state, total: state.total - existing_item.price };
       }
       
     default:
